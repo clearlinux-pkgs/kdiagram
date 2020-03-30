@@ -2070,6 +2070,7 @@ libKChart.so.2:_ZThn48_N6KChart18AbstractAreaWidgetD1Ev
 libKChart.so.2:_ZThn48_N6KChart6LegendD0Ev
 libKChart.so.2:_ZThn48_N6KChart6LegendD1Ev
 libKChart.so.2:_ZThn48_NK6KChart18AbstractAreaWidget12areaGeometryEv
+libKChart.so.2:_Zls6QDebugN6KChart13CartesianAxis8PositionE
 libKChart.so.2:_Zls6QDebugRKN6KChart13PieAttributesE
 libKChart.so.2:_Zls6QDebugRKN6KChart14GridAttributesE
 libKChart.so.2:_Zls6QDebugRKN6KChart14LineAttributesE
