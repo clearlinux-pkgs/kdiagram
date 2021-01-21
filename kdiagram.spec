@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x88CD13E7B5BDEF7D (danders@get2net.dk)
 #
 Name     : kdiagram
-Version  : 2.7.0
-Release  : 5
-URL      : https://download.kde.org/stable/kdiagram/2.7.0/kdiagram-2.7.0.tar.xz
-Source0  : https://download.kde.org/stable/kdiagram/2.7.0/kdiagram-2.7.0.tar.xz
-Source1  : https://download.kde.org/stable/kdiagram/2.7.0/kdiagram-2.7.0.tar.xz.sig
+Version  : 2.8.0
+Release  : 6
+URL      : https://download.kde.org/stable/kdiagram/2.8.0/kdiagram-2.8.0.tar.xz
+Source0  : https://download.kde.org/stable/kdiagram/2.8.0/kdiagram-2.8.0.tar.xz
+Source1  : https://download.kde.org/stable/kdiagram/2.8.0/kdiagram-2.8.0.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-2.0
@@ -66,15 +66,15 @@ license components for the kdiagram package.
 
 
 %prep
-%setup -q -n kdiagram-2.7.0
-cd %{_builddir}/kdiagram-2.7.0
+%setup -q -n kdiagram-2.8.0
+cd %{_builddir}/kdiagram-2.8.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1593023050
+export SOURCE_DATE_EPOCH=1611194396
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -90,10 +90,10 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1593023050
+export SOURCE_DATE_EPOCH=1611194396
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/kdiagram
-cp %{_builddir}/kdiagram-2.7.0/LICENSE.GPL.txt %{buildroot}/usr/share/package-licenses/kdiagram/4cc77b90af91e615a64ae04893fdffa7939db84c
+cp %{_builddir}/kdiagram-2.8.0/LICENSE.GPL.txt %{buildroot}/usr/share/package-licenses/kdiagram/4cc77b90af91e615a64ae04893fdffa7939db84c
 pushd clr-build
 %make_install
 popd
@@ -105,6 +105,8 @@ popd
 %defattr(-,root,root,-)
 /usr/share/locale/ar/LC_MESSAGES/kchart_qt.qm
 /usr/share/locale/ar/LC_MESSAGES/kgantt_qt.qm
+/usr/share/locale/ast/LC_MESSAGES/kchart_qt.qm
+/usr/share/locale/ast/LC_MESSAGES/kgantt_qt.qm
 /usr/share/locale/bg/LC_MESSAGES/kgantt_qt.qm
 /usr/share/locale/bs/LC_MESSAGES/kchart_qt.qm
 /usr/share/locale/bs/LC_MESSAGES/kgantt_qt.qm
@@ -114,6 +116,7 @@ popd
 /usr/share/locale/ca@valencia/LC_MESSAGES/kgantt_qt.qm
 /usr/share/locale/cs/LC_MESSAGES/kchart_qt.qm
 /usr/share/locale/cs/LC_MESSAGES/kgantt_qt.qm
+/usr/share/locale/da/LC_MESSAGES/kgantt_qt.qm
 /usr/share/locale/de/LC_MESSAGES/kchart_qt.qm
 /usr/share/locale/de/LC_MESSAGES/kgantt_qt.qm
 /usr/share/locale/el/LC_MESSAGES/kchart_qt.qm
@@ -312,6 +315,7 @@ popd
 /usr/include/KGantt/KGanttLegend
 /usr/include/KGantt/KGanttListViewRowController
 /usr/include/KGantt/KGanttPenStyleComboBox
+/usr/include/KGantt/KGanttPrintingContext
 /usr/include/KGantt/KGanttProxyModel
 /usr/include/KGantt/KGanttStyleOptionGanttItem
 /usr/include/KGantt/KGanttSummaryHandlingProxyModel
@@ -337,6 +341,7 @@ popd
 /usr/include/KGantt/kganttlegend.h
 /usr/include/KGantt/kganttlistviewrowcontroller.h
 /usr/include/KGantt/kganttpenstylecombobox.h
+/usr/include/KGantt/kganttprintingcontext.h
 /usr/include/KGantt/kganttproxymodel.h
 /usr/include/KGantt/kganttstyleoptionganttitem.h
 /usr/include/KGantt/kganttsummaryhandlingproxymodel.h
@@ -360,9 +365,9 @@ popd
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libKChart.so.2
-/usr/lib64/libKChart.so.2.7.0
+/usr/lib64/libKChart.so.2.8.0
 /usr/lib64/libKGantt.so.2
-/usr/lib64/libKGantt.so.2.7.0
+/usr/lib64/libKGantt.so.2.8.0
 
 %files license
 %defattr(0644,root,root,0755)
